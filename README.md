@@ -22,6 +22,9 @@ Repositori ini digunakan untuk mengorganisir, menyimpan, dan membagikan informas
 ### Desain dan Prototype
 
 1. Abdulhadi
+
+![Image of Yaktocat](https://i.kym-cdn.com/photos/images/newsfeed/002/652/421/280.jpg)
+
 2. Ilham Maulana
 3. Muhammad Faiz Bintang Pratama
 4. d
