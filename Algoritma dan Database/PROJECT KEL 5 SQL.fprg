@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="LENOVO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-22 09:34:39 PM"/>
+        <attribute name="created" value="TEVOT1ZPO0RFU0tUT1AtRkcyR0tNMTsyMDIzLTA5LTA4OzAxOjQzOjEzIFBNOzI3OTM="/>
+        <attribute name="edited" value="TEVOT1ZPO0RFU0tUT1AtRkcyR0tNMTsyMDIzLTA5LTA4OzA0OjM0OjM1IFBNOzE7TEVOT1ZPO0RFU0tUT1AtRkcyR0tNMTsyMDIzLTA5LTA4OzA0OjE3OjIyIFBNO1Byb2plY3RTZWxsZXIuZnByZzs3NjQy"/>
+        <attribute name="edited" value="QUNFUjtMQVBUT1AtVkc4TExWSVY7MjAyMy0wOS0wODswOToyNDoyNSBQTTsyO0xFTk9WTztERVNLVE9QLUZHMkdLTTE7MjAyMy0wOS0wODswNDoxNzoyMiBQTTtQcm9qZWN0U2VsbGVyLmZwcmc7NzUzNQ=="/>
+        <attribute name="edited" value="QUNFUjtMQVBUT1AtVkc4TExWSVY7MjAyMy0wOS0xOTswNzoyOTozMSBBTTsxNTsyODQw"/>
+        <attribute name="edited" value="UmF2aWRhO1JBVklEQTg5OzIwMjMtMDktMjE7MTE6MzA6MzAgQU07NTsyNTE5"/>
+        <attribute name="edited" value="TEVOT1ZPO0RFU0tUT1AtRkcyR0tNMTsyMDIzLTA5LTIyOzA5OjM0OjM5IFBNOzgxOzI5Njk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="client" type="String" array="False" size=""/>
+            <output expression="&quot;Penjual/Pembeli&quot;" newline="True"/>
+            <input variable="client"/>
+            <if expression="client = &quot;Penjual&quot;">
+                <then>
+                    <call expression="seller"/>
+                </then>
+                <else>
+                    <call expression="buyer"/>
+                </else>
+            </if>
+            <output expression="&quot;Selesai&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="buyer" type="None" variable="">
+        <parameters/>
+        <body>
+            <call expression="OpsiMakan"/>
+            <call expression="PilihKantin"/>
+            <call expression="OpsiPembayaran"/>
+        </body>
+    </function>
+    <function name="editMenu" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="editKategori" type="String" array="False" size=""/>
+            <output expression="&quot;Edit Kategori&quot;" newline="True"/>
+            <output expression="&quot;Makanan / Minuman&quot;" newline="True"/>
+            <input variable="editKategori"/>
+            <if expression="editKategori = &quot;makanan&quot;">
+                <then>
+                    <declare name="Harga" type="Integer" array="False" size=""/>
+                    <declare name="jenis, Gambar" type="String" array="False" size=""/>
+                    <output expression="&quot;Nama &quot; &amp; editKategori" newline="True"/>
+                    <input variable="jenis"/>
+                    <output expression="&quot;Masukan Gambar=&quot;" newline="True"/>
+                    <input variable="Gambar"/>
+                    <output expression="&quot;Harga=&quot;" newline="True"/>
+                    <input variable="Harga"/>
+                    <output expression="&quot;Item berhasil ditambahkan&quot;" newline="True"/>
+                </then>
+                <else>
+                    <declare name="Harga" type="Integer" array="False" size=""/>
+                    <declare name="jenis, Gambar" type="String" array="False" size=""/>
+                    <output expression="&quot;Nama &quot;&amp; editKategori" newline="True"/>
+                    <input variable="jenis"/>
+                    <output expression="&quot;Masukan Gambar=&quot;" newline="True"/>
+                    <input variable="Gambar"/>
+                    <output expression="&quot;Harga=&quot;" newline="True"/>
+                    <input variable="Harga"/>
+                    <output expression="&quot;Item berhasil ditambahkan&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="OpsiMakan" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Metode, Takeaway, Dinein, Scan" type="String" array="False" size=""/>
+            <output expression="&quot;Take away atau Dine in?&quot;" newline="True"/>
+            <input variable="Metode"/>
+            <if expression="Metode = &quot;Dine in&quot;">
+                <then>
+                    <input variable="Scan"/>
+                    <output expression="&quot;Scan berhasil&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+    <function name="Opsipembayaran" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bayar, Tf, Cash" type="String" array="False" size=""/>
+            <output expression="&quot;Opsi pembayaran&quot;" newline="True"/>
+            <output expression="&quot;Tf / Cash ?&quot;" newline="True"/>
+            <input variable="bayar"/>
+            <if expression="bayar = &quot;Tf&quot;">
+                <then>
+                    <output expression="&quot;Pembayaran berhasil&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <output expression="&quot;Status pesanan&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="Pesanan" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Payment" type="String" array="False" size=""/>
+            <comment text="Client database"/>
+            <output expression="&quot;Pesanan adalah...&quot;" newline="True"/>
+            <output expression="&quot;Payment verified?&quot;" newline="True"/>
+            <input variable="Payment"/>
+            <output expression="&quot;Pembeli duduk di meja nomor... / Pembeli menunggu pesanan&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="PilihKantin" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Menu, Opsitambah, Pesanan, NameNote" type="String" array="False" size=""/>
+            <do expression="Opsitambah==&quot;Ya&quot;">
+                <call expression="PilihKantin2"/>
+                <output expression="&quot;Pilih menu&quot;" newline="True"/>
+                <input variable="Menu"/>
+                <output expression="Menu &amp; &quot; berhasil ditambahkan&quot;" newline="True"/>
+                <output expression="&quot;Tambah ga? Ya/Tidak&quot;" newline="True"/>
+                <input variable="Opsitambah"/>
+            </do>
+            <output expression="&quot;Name dan Note&quot;" newline="True"/>
+            <input variable="NameNote"/>
+            <output expression="&quot;Total Harga= &quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="PilihKantin2" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Kantin, A, B, C, D, E, F, G, H, I" type="String" array="False" size=""/>
+            <do expression="Kantin != &quot;A&quot; &amp;&amp; Kantin!=&quot;B&quot; &amp;&amp; Kantin!= &quot;C&quot;">
+                <output expression="&quot;Nama kantin&quot;" newline="True"/>
+                <input variable="Kantin"/>
+                <if expression="Kantin = &quot;A&quot;">
+                    <then/>
+                    <else>
+                        <if expression="Kantin = &quot;B&quot;">
+                            <then/>
+                            <else>
+                                <if expression="Kantin = &quot;C&quot;">
+                                    <then/>
+                                    <else>
+                                        <output expression="&quot;kantin tidak ada&quot;" newline="True"/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+    <function name="seller" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Username, Password, Dashboard" type="String" array="False" size=""/>
+            <output expression="&quot;Username =&quot;" newline="True"/>
+            <input variable="Username"/>
+            <output expression="&quot;Password =&quot;" newline="True"/>
+            <input variable="Password"/>
+            <output expression="&quot;Login berhasil&quot;" newline="True"/>
+            <output expression="&quot;Edit / Pesanan&quot;" newline="True"/>
+            <input variable="Dashboard"/>
+            <if expression="Dashboard = &quot;Edit&quot;">
+                <then>
+                    <call expression="editMenu"/>
+                </then>
+                <else>
+                    <call expression="Pesanan"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
