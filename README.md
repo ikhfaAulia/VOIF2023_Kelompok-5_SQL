@@ -16,8 +16,8 @@ Repositori ini digunakan untuk mengorganisir, menyimpan, dan membagikan informas
 ### Algoritma dan Flowchart
 
 1. Zahra Ismaya
-2. b
-3. c
+2. Ripan Putra
+3. Guna Fathalla
 
 ### Desain dan Prototype
 
