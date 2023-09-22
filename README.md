@@ -13,7 +13,7 @@ Repositori ini digunakan untuk mengorganisir, menyimpan, dan membagikan informas
 2. Azzahra Fitri
 3. Aura Salsa Azzahra
 
-### Algoritma dan Flowchart
+### Algoritma dan Database
 
 1. Zahra Ismaya
 2. Ripan Putra
